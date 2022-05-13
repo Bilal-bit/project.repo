@@ -67,22 +67,91 @@ header ul li a{
 }
 .content .textbox h2{
     color: #333;
-    font-size: 4em;
+    font-size: 3em;
     line-height: 1.4em;
-    font-weight: 500;
+    font-weight: 100;
 }
 .content .textbox h2 span{ 
     color: #017143;
     font-size: 1.2em;
     font-weight: 900;
 }
+.content .textbox p{
+    color: #333;
+}
+.content .textbox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background:#017143;
+    color: #fff;
+    border-radius: 40px;
+    font-weight:500;
+    letter-spacing: 1;
+    text-decoration: none;
+}
+.content .imgbox{
+    width: 500px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+.content .imgbox img{
+    max-width: 340px;
+    
+}
+.thumb{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%);
+    display: flex;
+}
+.thumb li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 10%;
+}
+.thumb li:hover{
+    transform: translateY(-10px);
 
-
-
+}
+.thumb li img{
+    max-width: 60px;
+}
+.sci{
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sci li{
+    list-style: none;
+}
+.sci li a
+{
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+}
+.circle
+{
+    
+}
     </style>
 </head>
 <body>
     <section>
+        <div class="circle">
+
+        </div>
         <header>
             <a href="#" ><img src="logo.png" alt="" class="logo"></a>
             <ul>
@@ -94,12 +163,29 @@ header ul li a{
         </header>
         <div class="content">
             <div class="textbox">
-                <h2 style="margin-top: 100px;">It's not just a Coffee <br>It's<span> Starbucks</span></h2>
+                <h2>It's not just a Coffee <br>It's<span> Starbucks</span></h2>
                 <p>This is a coffee shop where u can find best Coffee </p>
                 <a href="#">Learn more</a>
         </div>
-        <div class="Imagebox">
+        <div class="imgbox">
             <img src="img1.png" alt="" class="Starbucks">
+            </div>
+            </div>
+            <ul class="thumb">
+                <li><img src="thumb1.png" onclick="imgslider('img1.png')"></li>
+                <li><img src="thumb2.png" onclick="imgslider('img2.png')"></li>
+                <li><img src="thumb3.png" onclick="imgslider('img3.png')"></li>
+            </ul>
+            <ul class="sci">
+                <li><a href="#"><img src="facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="twitter.png" alt=""></a></li>
+                <li><a href="#"><img src="instagram.png" alt=""></a></li>
+            </ul>
     </section>
+    <script>
+        function imgslider(anything){
+            document.querySelector('.Starbucks').src = anything;
+        }
+    </script>
 </body>
 </html>
